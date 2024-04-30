@@ -399,26 +399,7 @@ Private Sub render_MouseUp(Button As Integer, Shift As Integer, x As Single, y A
         
         'ciudad
         
-            If x > 297 And x < 314 And y > 321 And y < 340 Then 'ok
-    
-                If frmCrearPersonaje.lstHogar.ListIndex < frmCrearPersonaje.lstHogar.ListCount - 1 Then
-                   ' frmCrearPersonaje.lstHogar.ListIndex = frmCrearPersonaje.lstHogar.ListIndex + 1
-                Else
-                    frmCrearPersonaje.lstHogar.ListIndex = 6
 
-                End If
-
-            End If
-            
-            If x > 416 And x < 433 And y > 323 And y < 338 Then 'ok
-                If frmCrearPersonaje.lstHogar.ListIndex - 1 < 0 Then
-                    'frmCrearPersonaje.lstHogar.ListIndex = frmCrearPersonaje.lstHogar.ListCount - 1
-                Else
-                    frmCrearPersonaje.lstHogar.ListIndex = 6
-
-                End If
-
-            End If
             If x >= 289 And x < 289 + 160 And y >= 525 And y < 525 + 37 Then 'Boton > Volver
                 Call ao20audio.playwav(SND_CLICK)
                 AlphaNiebla = 25
@@ -451,8 +432,8 @@ Private Sub render_MouseUp(Button As Integer, Shift As Integer, x As Single, y A
                 UserStats.Sexo = frmCrearPersonaje.lstGenero.ListIndex + 1
                 UserStats.Clase = frmCrearPersonaje.lstProfesion.ListIndex + 1
                 
-                UserStats.Hogar = 6 'frmCrearPersonaje.lstHogar.ListIndex + 1
-               
+                UserStats.Hogar = 6
+                
                 If frmCrearPersonaje.CheckData() Then
                     UserPassword = CuentaPassword
                     StopCreandoCuenta = True
@@ -748,26 +729,7 @@ Private Sub render_MouseUp(Button As Integer, Shift As Integer, x As Single, y A
 
             End If
        
-            If x > 297 And x < 314 And y > 321 And y < 340 Then 'ok
-    
-                If frmCrearPersonaje.lstHogar.ListIndex < frmCrearPersonaje.lstHogar.ListCount - 1 Then
-                    'frmCrearPersonaje.lstHogar.ListIndex = frmCrearPersonaje.lstHogar.ListIndex + 1
-                Else
-                    frmCrearPersonaje.lstHogar.ListIndex = 6
 
-                End If
-
-            End If
-            
-            If x > 416 And x < 433 And y > 323 And y < 338 Then 'ok
-                If frmCrearPersonaje.lstHogar.ListIndex - 1 < 0 Then
-                    'rmCrearPersonaje.lstHogar.ListIndex = frmCrearPersonaje.lstHogar.ListCount - 1
-                Else
-                    frmCrearPersonaje.lstHogar.ListIndex = 6
-
-                End If
-
-            End If
             If x >= 289 And x < 289 + 160 And y >= 525 And y < 525 + 37 Then 'Boton > Volver
                 Call ao20audio.playwav(SND_CLICK)
                 'UserMap = 323
